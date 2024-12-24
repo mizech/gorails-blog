@@ -1,0 +1,12 @@
+<h1>My Blog-Posts</h1>
+<% if user_signed_in? %>
+    <div>
+        <%= link_to "Create new Blog-Post", new_blog_post_path %>
+    </div>
+<% end %>
+<% @posts.each do |post| %>
+    <div>
+        <h2><%= link_to post.title, post %></h2>
+        <p><%= post.body %></p>
+    </div>
+<% end %>

@@ -1,0 +1,9 @@
+
+<% if user_signed_in? %>
+    <div>
+        <%= link_to "Edit post", edit_blog_post_path(@post) %>
+    </div>
+<% end %>
+
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
